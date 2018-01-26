@@ -33,7 +33,7 @@ class HidingViewController {
 		if let expandedCenter = expandedCenter {
 			return expandedCenter(view)
 		}
-		return CGPoint(x: 0, y: 0)
+		return CGPoint(x: 0, y: 20)
 	}
 	
 	func contractionAmountValue() -> CGFloat {
@@ -106,7 +106,7 @@ class HidingViewController {
 	}
 	
     func snap(_ contract: Bool, completion:(() -> Void)!) -> CGFloat {
-		var deltaY: CGFloat = 0
+		var deltaY: CGFloat = 0 // add_nakagawa
 		
 		UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions(), animations: {
 			if let child = self.child {
