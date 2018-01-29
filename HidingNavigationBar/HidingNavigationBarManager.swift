@@ -51,6 +51,7 @@ open class HidingNavigationBarManager: NSObject, UIScrollViewDelegate, UIGesture
     open var menuView: UIView? // add_nakagawa
     open var addInset: CGFloat = 60 // add_nakagawa
     open var isShow: Bool = false // add_nakagawa
+    open var iPhoneXMargin: CGFloat = 0 // add_nakagawa
 	
 	// Scroll calculation values
     open var topInset: CGFloat = 0 // add_nakagawa
@@ -342,9 +343,9 @@ open class HidingNavigationBarManager: NSObject, UIScrollViewDelegate, UIGesture
         var top: CGFloat // add_nakagawa
 		if extensionController.isContracted() == false {
 			//top = extensionController.view.frame.origin.y + extensionController.view.bounds.size.height
-            top = navBarBottomY + 2 // add_nakagawa
+            top = navBarBottomY + 2 + iPhoneXMargin // add_nakagawa
 		} else {
-            top = navBarBottomY + 2 // add_nakagawa
+            top = navBarBottomY + 2 + iPhoneXMargin // add_nakagawa
 		}
         
         updateScrollContentInsetTop(top)
