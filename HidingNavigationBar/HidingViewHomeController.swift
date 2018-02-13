@@ -1,15 +1,16 @@
 //
-//  HidingViewController.swift
+//  HidingViewHomeController.swift
 //  Optimus
 //
 //  Created by Tristan Himmelman on 2015-03-17.
 //  Copyright (c) 2015 Hearst TV. All rights reserved.
 //
+
 import UIKit
 
-class HidingViewController {
+class HidingViewHomeController {
 	
-	var child: HidingViewController?
+	var child: HidingViewHomeController?
 	var navSubviews: [UIView]?
 	var view: UIView
 	
@@ -32,7 +33,7 @@ class HidingViewController {
 		if let expandedCenter = expandedCenter {
 			return expandedCenter(view)
 		}
-		return CGPoint(x: 0, y: 0)
+		return CGPoint(x: 0, y: 20)
 	}
 	
 	func contractionAmountValue() -> CGFloat {
@@ -105,7 +106,7 @@ class HidingViewController {
 	}
 	
     func snap(_ contract: Bool, completion:(() -> Void)!) -> CGFloat {
-		var deltaY: CGFloat = 0
+		var deltaY: CGFloat = 0 // add_nakagawa
 		
 		UIView.animate(withDuration: 0.2, delay: 0, options: UIViewAnimationOptions(), animations: {
 			if let child = self.child {
