@@ -86,7 +86,7 @@ open class HidingNavigationBarHomeManager: NSObject, UIScrollViewDelegate, UIGes
 		let navBar = viewController.navigationController!.navigationBar
 		navBarController = HidingViewHomeController(view: navBar)
 		navBarController.child = extensionController
-		navBarController.alphaFadeEnabled = true
+		navBarController.alphaFadeEnabled = false
 		
 		super.init()
 		
