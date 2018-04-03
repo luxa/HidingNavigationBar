@@ -81,7 +81,7 @@ open class HidingNavigationBarManager: NSObject, UIScrollViewDelegate, UIGesture
 		let navBar = viewController.navigationController!.navigationBar
 		navBarController = HidingViewController(view: navBar)
 		navBarController.child = extensionController
-        if available(iOS 11.0, *) {
+        if #available(iOS 11.0, *) {
             navBarController.alphaFadeEnabled = false
         } else {
             navBarController.alphaFadeEnabled = true
